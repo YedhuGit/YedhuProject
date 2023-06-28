@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class LoginPage {
 
 static WebDriver driver;
+
 public static void alertTest(){
     WebDriverManager.chromedriver().setup();
     driver = new ChromeDriver();
@@ -16,7 +17,15 @@ public static void alertTest(){
     System.out.println("Yedhu");
     driver.findElement(By.linkText("SwitchTo")).click();
 }
+public static void frameTest(){
+    WebDriverManager.chromedriver().setup();
+    driver = new ChromeDriver();
+    driver.manage().window().maximize();
+    
+}
+
     public static void main(String[] args) {
-alertTest();
+   frameTest();
+    //alertTest();
     }
 }
