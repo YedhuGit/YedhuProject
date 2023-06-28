@@ -1,6 +1,7 @@
 package StepDefinition;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -13,9 +14,8 @@ public static void alertTest(){
     driver.manage().window().maximize();
     driver.get("https://demo.automationtesting.in/Alerts.html");
     System.out.println("Yedhu");
-
+    driver.findElement(By.linkText("SwitchTo")).click();
 }
-
     public static void main(String[] args) {
 alertTest();
     }
